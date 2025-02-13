@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="display: flex; flex-direction: column;border: 1px;">
+
+
+    <h1>this is dashboard</h1>
+    <h3>User Data</h3>
+    <p>Name is {{current_user.username}}</p>
+    <p>Email is {{current_user.email}}</p>
+    <p>Role is {{current_user.role}}</p>
+
+<div>
+    <a href="{{ url_for('profile' ) }}" style="border: 1px solid ;">View Profile</a>
+    <a href="{{ url_for('logout') }}"style="border: 1px solid ;">Logout User</a>
+</div>
+</div>
+
+{% endblock %}
